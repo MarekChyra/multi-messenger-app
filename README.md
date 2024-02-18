@@ -41,6 +41,7 @@ database:
 ```
 #### SSL
 Je potrebný pre klienty, ktoré sa nenachádzajú priamo na serveri.
+
 9. Nainštalujte si openssl (malo by to byť v základe na linuxe)
 ##### Generovanie CA
 10. Generovanie RSA `openssl genrsa -aes256 -out ca-key.pem 4096`
