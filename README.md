@@ -4,10 +4,10 @@ Tento projekt som začal robiť, lebo som mal ľudí na rôznych sociálnych sie
 ## Inštrukcie (Instagram)
 ### Linux
 1. Nainštalujte si virtualizačnú platformu [Docker](https://www.docker.com/products/docker-desktop/)
-2. Stiahnite si konfiguračný súbor [docker-compose.yml](). V tom súbore si zmeňte `$domena` v `SYNAPSE_SERVER_NAME=$domena` na vašu doménu, čo budete používať (nemusíte ju vlastniť, bude to len lokálna identifikácia) a všade, kde sa ocitne `$domena` to prepíšete na vašu doménu. A ešte si zmeňte `$db_user` a `$db_pass` v `POSTGRES_USER=$db_user` a `POSTGRES_PASSWORD=$db_pass`.
+2. Stiahnite si konfiguračný súbor [docker-compose.yml](/docker-compose.yml). V tom súbore si zmeňte `$domena` v `SYNAPSE_SERVER_NAME=$domena` na vašu doménu, čo budete používať (nemusíte ju vlastniť, bude to len lokálna identifikácia) a všade, kde sa ocitne `$domena` to prepíšete na vašu doménu. A ešte si zmeňte `$db_user` a `$db_pass` v `POSTGRES_USER=$db_user` a `POSTGRES_PASSWORD=$db_pass`.
 3. Spustite `docker-compose run --rm -e SYNAPSE_SERVER_NAME=$domena -e SYNAPSE_REPORT_STATS=yes synapse generate` (nezabudnite prepísať `$domena`)
 4. Vytvoria sa vám priečinky `schemas`, `files` a `mautrix-instagram`. 
-5. V priečinku `mautrix-instagram` otvorte `config.yaml` a zmeňte `$domena`, `$db_user` a `$db_pass`
+5. Otvorte priečinok `mautrix-instagram` a stiahnite tam [config.yaml](/config.yaml), otvorte `config.yaml` a zmeňte `$domena`, `$db_user` a `$db_pass`
 ```yaml
 homeserver:
   ...
@@ -18,7 +18,7 @@ appservice:
   database: postgres://$db_user:$db_pass@db:5432/test_db
   ...
 ```
-6. Do `files` si stiahnite [double-puppeting-registration.yaml]() a **skopírujte** z mautrix-instagram `registration.yaml` a premenujte to na `mautrix-instagram-registration.yaml`
+6. Do `files` si stiahnite [double-puppeting-registration.yaml](/double-puppeting-registration.yaml), [homeserver.yaml](/homeserver.yaml) a **skopírujte** z mautrix-instagram `registration.yaml` a premenujte to na `mautrix-instagram-registration.yaml`
 7. V double-puppeting-registration.yaml zmeňte `$domena`:
 ```yaml
 ...
