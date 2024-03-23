@@ -39,7 +39,7 @@ enable_registration_without_verification: true
 report_stats: true
 macaroon_secret_key: "8MPOWg;pVY=D3#DXG9WMs-xE0SH.vNso-euOj;.iGRVeREfZZ-"
 form_secret: "ZFkidaUqPQH=UY-KICbfpjlG62qrIwXg.6o5#j.6nL=+IOuJV^"
-signing_key_path: "/data/fedora.signing.key"
+signing_key_path: "/data/$(domain).signing.key"
 # trusted_key_servers:
 #   - server_name: "matrix.org"
 app_service_config_files:
