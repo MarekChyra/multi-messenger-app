@@ -1,5 +1,7 @@
+<!--
 ## Úvod
 Tento projekt som začal robiť, lebo som mal ľudí na rôznych sociálnych sieťach prevažne na Instagrame a na Discorde ale môžete to aplikovať aj na aplikácii Slack, Facebook Messenger, Telegram, Whatsapp, Signal, SMS, RCS, google chat, X/Twitter a iMessage (iMessage funguje tak, že raz funguje a raz nie, ďakujem Apple).
+-->
 
 ## Inštrukcie (Instagram)
 ### Linux
