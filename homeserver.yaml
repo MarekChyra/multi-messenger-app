@@ -9,7 +9,7 @@
 # For more information on how to configure Synapse, including a complete accounting of
 # each option, go to docs/usage/configuration/config_documentation.md or
 # https://element-hq.github.io/synapse/latest/usage/configuration/config_documentation.html
-server_name: "fedora"
+server_name: "$(domain)"
 pid_file: /data/homeserver.pid
 listeners:
   - port: 8008
@@ -24,14 +24,14 @@ database:
   name: psycopg2
   txn_limit: 10000
   args:
-    user: db_user
-    password: db_pass
-    dbname: test_db
+    user: $(db_user)
+    password: $(db_pass)
+    dbname: $(test_db)
     host: db
     port: 5432
     cp_min: 5
     cp_max: 10
-log_config: "/data/fedora.log.config"
+log_config: "/data/$(domain).log.config"
 media_store_path: /data/media_store
 registration_shared_secret: "y30S5BvcDfzx2T61T1@tp,KX4j-aeXiNCT.C3mmHUaw,#EmMa~"
 enable_registration_without_verification: true
