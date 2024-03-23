@@ -38,7 +38,7 @@ services:
     # See the readme for a full documentation of the environment settings
     # NOTE: You must edit homeserver.yaml to use postgres, it defaults to sqlite
     environment:
-      - SYNAPSE_SERVER_NAME=fedora
+      - SYNAPSE_SERVER_NAME=$(domain)
       - SYNAPSE_REPORT_STATS=yes
       - SYNAPSE_HTTP_PORT=8008
       - SYNAPSE_CONFIG_PATH=/data/homeserver.yaml
@@ -82,8 +82,8 @@ services:
     #   - test_network
     # Change that password, of course!
     environment:
-      - POSTGRES_USER=db_user
-      - POSTGRES_PASSWORD=db_pass
+      - POSTGRES_USER=$(db_user)
+      - POSTGRES_PASSWORD=$(db_pass)
       # ensure the database gets created correctly
       # https://element-hq.github.io/synapse/latest/postgres.html#set-up-database
       - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C
